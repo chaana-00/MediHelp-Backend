@@ -1,0 +1,5 @@
+0 BA - Cellulitis
+1 BA - Impetigo
+2 FU - Athlete Foot
+3 FU - Ringworm
+4 SI - Samaple-Images
