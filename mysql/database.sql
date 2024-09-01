@@ -36,9 +36,9 @@ CREATE TABLE doctor (
 INSERT INTO doctor (name, hospital, contact, specifications)
 VALUES
 ('Dr. Dilip Kumara', 'Colombo National Hospital', '011-212-3456', 'BA - Cellulitis'),
-('Dr. Amal Bandara', 'Kandy National Hospital', '081-223-4567', 'BA - Impetigo'),
-('Dr. Pasan Jayasuriya', 'Galle Teaching Hospital', '091-234-5678', 'FU - Athlete Foot'),
-('Dr. Chandana Rathnayake', 'Anuradhapura General Hospital', '025-245-6789', 'FU - Ringworm');
+('Dr. Kasuni Bandara', 'Kandy National Hospital', '081-223-4567', 'BA - Impetigo'),
+('Dr. Chandana Jayasuriya', 'Galle Teaching Hospital', '091-234-5678', 'FU - Athlete Foot'),
+('Dr. Nipuni Rathnayake', 'Anuradhapura General Hospital', '025-245-6789', 'FU - Ringworm');
 
 
 CREATE TABLE prediction (
@@ -48,4 +48,13 @@ CREATE TABLE prediction (
     datetime DATETIME NOT NULL,
     age INT NOT NULL,
     FOREIGN KEY (userId) REFERENCES users(id)
+);
+
+CREATE TABLE contact_form (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    subject VARCHAR(255) NOT NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
