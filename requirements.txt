@@ -1,8 +1,10 @@
 conda create --name FinalProject
 conda create -n myenv python=3.9
+
+# install libraries
 pip install flask==3.0.2 flask-mysqldb==2.0.0 flask-cors==4.0.0 tensorflow==2.15.0 pillow==10.0.1 pip numpy==1.26.4
 
-
+# check libaries
 pip show flask
 pip show tensorflow
 pip show flask-mysqldb

@@ -38,3 +38,4 @@ def get_predictions_by_user(mysql, userId):
     predictions = cursor.fetchall()
     cursor.close()
     return predictions
+
