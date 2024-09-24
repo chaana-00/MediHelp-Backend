@@ -62,37 +62,6 @@ def predict_image(img_path):
         logging.error(f"Prediction error: {e}")
         return "Prediction Server Error"
 
-# @app.route('/submit_form', methods=['POST'])
-# def submit_form():
-#     name = request.form.get('name')
-#     email = request.form.get('email')
-#     subject = request.form.get('subject')
-#     message = request.form.get('message')
-
-#     cursor = mysql.connection.cursor()
-
-#     try:
-#         query = "INSERT INTO contact_form (name, email, subject, message) VALUES (%s, %s, %s, %s)"
-#         cursor.execute(query, (name, email, subject, message))
-#         mysql.connection.commit()
-#         return jsonify({'success': 'Form submitted successfully'})
-    
-#     except Exception as e:
-#         return jsonify({'error': str(e)})
-    
-#     finally:
-#         cursor.close()
-
-# @app.route('/display_table')
-# def display_table():
-#     cursor = mysql.connection.cursor()
-#     cursor.execute("SELECT * FROM contact_form")
-#     data = cursor.fetchall()
-#     cursor.close()
-
-#     return render_template('display_table.html', data=data)
-
-
 @app.route('/prediction', methods=['POST'])
 def classify_image():
     if 'file' not in request.files:
